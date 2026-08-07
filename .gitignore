@@ -1,0 +1,39 @@
+node_modules
+
+# Output
+.output
+.vercel
+.netlify
+.wrangler
+/.svelte-kit
+/build
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
+!.env.example
+!.env.test
+
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# ================================================================
+# Personal / machine-specific files — NOT for public release.
+# These contain local usernames, absolute paths and LAN IPs, or
+# screenshots of a real personal library. Sanitized, commit-safe
+# examples are provided as *.example files alongside them.
+# ================================================================
+
+# My real LAN setup script (hardcodes user, paths and LAN IPs)
+setup-lan.sh
+
+# Instantiated systemd unit with my username/path baked in
+/system/jelly-spotify@system.service
+
+# Screenshots of my personal Jellyfin library (privacy)
+/artifacts/

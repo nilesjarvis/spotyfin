@@ -1,0 +1,58 @@
+:root {
+  --bg-base: #121212;
+  --bg-elevated: #181818;
+  --bg-highlight: #282828;
+  --bg-press: #333;
+  --bg-sidebar: #000000;
+  --bg-player: #000000;
+  --bg-topbar: rgba(18, 18, 18, 0.92);
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+  --text-subdued: #6a6a6a;
+  --icon-inactive: #b3b3b3;
+  --icon-active: #ffffff;
+  --green: #1ed760;
+  --green-hover: #1fdf64;
+  --green-dark: #169c46;
+  --button-bg: #1f1f1f;
+  --button-hover: #2a2a2a;
+  --border-subtle: #292929;
+  --font: 'Circular', 'spotify-circular', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, ui-sans-serif, system-ui, 'Segoe UI', Roboto, sans-serif;
+  --sidebar-width: 260px;
+  --player-height: 88px;
+  --topbar-height: 64px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { height: 100%; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg-base);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+button { font-family: inherit; color: inherit; background: none; border: none; cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+input { font-family: inherit; }
+
+::selection { background: rgba(30, 215, 96, 0.3); }
+
+/* Scrollbars */
+::-webkit-scrollbar { width: 12px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 6px; border: 3px solid transparent; background-clip: content-box; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.3); background-clip: content-box; border: 3px solid transparent; }
+
+/* Utility to hide scrollbar for horizontal rows */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+
+.fade-in { animation: fadeIn 0.25s ease; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.spin { animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
