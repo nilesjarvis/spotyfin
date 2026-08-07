@@ -2,9 +2,9 @@
 // Talks directly to the configured Jellyfin server (CORS enabled).
 
 const CLIENT = {
-  name: 'Jelly Spotify',
+  name: 'Spotyfin',
   version: '1.0.0',
-  deviceName: 'Jelly Spotify Web'
+  deviceName: 'Spotyfin'
 };
 
 let _server = localStorage.getItem('jf_server') || defaultServer();

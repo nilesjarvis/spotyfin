@@ -31,7 +31,7 @@
 </script>
 
 <svelte:head>
-  <title>Spotify</title>
+  <title>Spotyfin</title>
 </svelte:head>
 
 {#if !auth.state.user}

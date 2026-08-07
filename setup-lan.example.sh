@@ -10,12 +10,12 @@
 set -euo pipefail
 
 # ---- Adjust these for your environment (no personal data here) ----
-LAN_APP_PORT="${LAN_APP_PORT:-5173}"     # Jelly Spotify web app port
+LAN_APP_PORT="${LAN_APP_PORT:-5173}"     # Spotyfin web app port
 LAN_JF_PORT="${LAN_JF_PORT:-8096}"       # Jellyfin API port
 LINGER_USER="${LINGER_USER:-$USER}"      # OS user that runs the app service
 # -------------------------------------------------------------------
 
-echo "== Jelly Spotify LAN setup =="
+echo "== Spotyfin LAN setup =="
 
 # 1) Allow the app and Jellyfin through the firewall, if UFW is used.
 #    (Idempotent; silently skipped if ufw is not installed/enforced.)
@@ -37,4 +37,4 @@ echo "Done. The web app is reachable on your local network at:"
 echo "    http://<this-pc-IP>:$LAN_APP_PORT"
 echo
 echo "For a system-wide (root) unit, see:"
-echo "    system/jelly-spotify@.service.example"
+echo "    system/spotyfin@.service.example"

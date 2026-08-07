@@ -1,23 +1,23 @@
 # EXAMPLE systemd unit — sanitized for public release.
 #
-# Your own instantiated unit (system/jelly-spotify@system.service) is
+# Your own instantiated unit (system/spotyfin@system.service) is
 # gitignored because it contains your <USER>, paths and node binary.
 # To use this example, copy it and substitute every <PLACEHOLDER>:
 #
-#   sudo cp system/jelly-spotify@.service.example \
-#          /etc/systemd/system/jelly-spotify.service
-#   sudo nano /etc/systemd/system/jelly-spotify.service   # fill in placeholders
+#   sudo cp system/spotyfin@.service.example \
+#          /etc/systemd/system/spotyfin.service
+#   sudo nano /etc/systemd/system/spotyfin.service   # fill in placeholders
 #   sudo systemctl daemon-reload \
-#        && sudo systemctl enable --now jelly-spotify
+#        && sudo systemctl enable --now spotyfin
 #
 # Substitution example (real values, not these placeholders):
 #   User=alice
-#   WorkingDirectory=/srv/jelly-spotify
-#   ExecStart=/usr/bin/node /srv/jelly-spotify/server.js
+#   WorkingDirectory=/srv/spotyfin
+#   ExecStart=/usr/bin/node /srv/spotyfin/server.js
 #   Environment=PORT=5173 / HOST=0.0.0.0
 #
 [Unit]
-Description=Jelly Spotify - Spotify-clone music web app for Jellyfin
+Description=Spotyfin - Spotify-clone music web app for Jellyfin
 After=network-online.target jellyfin.service
 Wants=network-online.target
 

@@ -1,4 +1,4 @@
-// Minimal production static server for the Jelly Spotify SPA (with SPA fallback).
+// Minimal production static server for the Spotyfin SPA (with SPA fallback).
 import http from 'node:http';
 import { createReadStream, existsSync, statSync } from 'node:fs';
 import path from 'node:path';
@@ -75,9 +75,9 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, HOST, () => {
-  console.log(`[jelly-spotify] serving ${ROOT}`);
-  console.log(`[jelly-spotify] http://localhost:${PORT}`);
-  console.log(`[jelly-spotify] LAN: http://${lanHosts() || '?.'}:${PORT}`);
+  console.log(`[spotyfin] serving ${ROOT}`);
+  console.log(`[spotyfin] http://localhost:${PORT}`);
+  console.log(`[spotyfin] LAN: http://${lanHosts() || '?.'}:${PORT}`);
 });
 
 function lanHosts() {

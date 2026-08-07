@@ -1,4 +1,4 @@
-# Jelly Spotify — a Spotify-clone music streaming app for Jellyfin
+# Spotyfin — a Spotify-clone music streaming app for Jellyfin
 
 A fully client-side **SvelteKit** web app that matches the Spotify desktop design 1:1
 (dark theme, green `#1ed760` accents, left navigation library, card grids with hover
