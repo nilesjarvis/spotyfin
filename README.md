@@ -15,6 +15,20 @@ audio directly from a Jellyfin server via its HTTP API (`CORS` enabled by defaul
 - **Queue drawer**, toasts, text modals (create/rename), custom in-app back/forward history, keyboard shortcuts (`Space`, `Ctrl←/→`, `m`, `s`).
 - Fully responsive / resizable for desktop screens.
 
+## Screenshots
+
+| Home | Search | Album |
+|---|---|---|
+| ![Home](screenshots/home.png) | ![Search](screenshots/search.png) | ![Album](screenshots/album.png) |
+
+| Artist | Playlist | Liked Songs |
+|---|---|---|
+| ![Artist](screenshots/artist.png) | ![Playlist](screenshots/playlist.png) | ![Liked Songs](screenshots/liked.png) |
+
+| Library | Now Playing |
+|---|---|
+| ![Library](screenshots/collection.png) | ![Now Playing](screenshots/nowplaying.png) |
+
 ## Run
 ```bash
 npm install
