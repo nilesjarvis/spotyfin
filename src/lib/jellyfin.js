@@ -46,7 +46,9 @@ export function getDisplayName() { return _userName || 'User'; }
 
 function headers(token = true) {
   const h = { 'Content-Type': 'application/json' };
-  if (token && _token) h['X-Emby-Token'] = _token;
+  // Jellyfin 12.1 dropped the legacy X-Emby-Token header; it only accepts
+  // the token in the Authorization header (MediaBrowser Token="...").
+  if (token && _token) h['Authorization'] = `MediaBrowser Token="${_token}"`;
   return h;
 }
 
