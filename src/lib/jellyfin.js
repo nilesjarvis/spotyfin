@@ -73,8 +73,17 @@ function authHeader() {
 // ---- auth ----
 export async function authenticate(username, password) {
   const body = JSON.stringify({ Username: username, Pw: password });
+  // Jellyfin 12.1 no longer parses the legacy X-Emby-Authorization header:
+  // the client identity must ride in the standard Authorization header,
+  // otherwise login 400s with ArgumentNullException (request.App null).
   const res = await fetch(`${_server}/Users/AuthenticateByName`, {
-    method: 'POST', headers: { 'Content-Type': 'application/json', 'X-Emby-Authorization': authHeader() }, body
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-Emby-Authorization': authHeader(),
+      'Authorization': authHeader()
+    },
+    body
   });
   if (!res.ok) {
     let msg = `Login failed (${res.status})`;
