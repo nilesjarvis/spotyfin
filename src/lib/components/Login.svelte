@@ -29,7 +29,7 @@
       <form onsubmit={ (e) => { e.preventDefault(); submit(); } }>
         <label class="field">
           <span>Username</span>
-          <input bind:value={username} type="text" placeholder="marcus" autocomplete="username" />
+          <input bind:value={username} type="text" placeholder="Username" autocomplete="username" />
         </label>
         <label class="field">
           <span>Password</span>
