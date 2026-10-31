@@ -31,7 +31,7 @@
       fav = !!(item.UserData && item.UserData.IsFavorite);
       const [pop, albs] = await Promise.all([
         jf.getItems({ ArtistIds: id, IncludeItemTypes: 'Audio', Recursive: true, SortBy: 'PlayCount', SortOrder: 'Descending', Limit: 5 }),
-        jf.getItems({ AlbumArtistIds: id, IncludeItemTypes: 'MusicAlbum', Recursive: true, SortBy: 'SortName', Limit: 100 })
+        jf.getItems({ AlbumArtistIds: id, IncludeItemTypes: 'MusicAlbum', Recursive: true, SortBy: 'SortName', Limit: 500 })
       ]);
       popular = pop.Items || []; albums = albs.Items || [];
       // similar artists by shared first genre
@@ -104,7 +104,7 @@
       </section>
     {/if}
     {#if albums.length}
-      <Section title="Albums" items={albums} type="album" />
+      <Section title="Albums" items={albums} type="album" grid={true} />
     {/if}
     {#if similar.length}
       <Section title="Fans also like" items={similar} type="artist" round={true} />
