@@ -40,7 +40,7 @@ function labelFor(path) {
         <div class="profile-drop">
           <div class="drow info">{auth.state.user?.Name}</div>
           <div class="dsep"></div>
-          <button class="drow" onclick={()=>{menuOpen=false; goto('/collection/playlists');}}>Your Library</button>
+          <button class="drow" onclick={()=>{menuOpen=false; goto('/collection/albums');}}>Your Library</button>
           <button class="drow" onclick={logout}>Log out</button>
         </div>
       {/if}

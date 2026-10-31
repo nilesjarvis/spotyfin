@@ -5,7 +5,7 @@
   import Icon from './Icon.svelte';
   import { goto } from '$app/navigation';
 
-  let { contentType = 'playlists' } = $props();
+  let { contentType = 'albums' } = $props();
   let items = $state([]);
   let loading = $state(true);
   let sort = $state('recent');
@@ -37,8 +37,8 @@
 
   <div class="toolbar">
     <div class="tabs">
-      <button class="tab" class:active={contentType==='playlists'} onclick={()=>goto('/collection/playlists')}>Playlists</button>
       <button class="tab" class:active={contentType==='albums'} onclick={()=>goto('/collection/albums')}>Albums</button>
+      <button class="tab" class:active={contentType==='playlists'} onclick={()=>goto('/collection/playlists')}>Playlists</button>
       <button class="tab" class:active={contentType==='artists'} onclick={()=>goto('/collection/artists')}>Artists</button>
     </div>
     <div class="sort-controls">

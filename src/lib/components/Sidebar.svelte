@@ -11,7 +11,7 @@
   let artists = $state([]);
   let albums = $state([]);
   let songs = $state([]);
-  let tab = $state('all');
+  let tab = $state('albums');
   let loading = $state(true);
 
   const tabs = [
@@ -111,13 +111,13 @@
 
   <div class="lib">
     <div class="lib-header">
-      <button class="lib-label" onclick={()=>goto('/collection/playlists')}>
+      <button class="lib-label" onclick={()=>goto('/collection/albums')}>
         <Icon name="library" size={24} />
         <span>Your Library</span>
       </button>
       <div class="lib-actions">
         <button class="icon-btn" title="Create playlist" onclick={createPlaylist}><Icon name="plus" size={20}/></button>
-        <button class="icon-btn" title="Your Library" onclick={()=>goto('/collection/playlists')}><Icon name="chevron_right" size={20}/></button>
+        <button class="icon-btn" title="Your Library" onclick={()=>goto('/collection/albums')}><Icon name="chevron_right" size={20}/></button>
       </div>
     </div>
 
